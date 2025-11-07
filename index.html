@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Buscaminas</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="script.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="controls">
+      <label for="difficulty">Dificultad:</label>
+      <select id="difficulty">
+        <option value="beginner">Principiante (9×9, 10)</option>
+        <option value="intermediate">Intermedio (16×16, 40)</option>
+        <option value="expert">Experto (30×16, 99)</option>
+        <option value="custom">Personalizado…</option>
+      </select>
+
+      <span id="customInputs" class="hidden">
+        <label>W:<input id="widthInput" type="number" min="5" max="50" value="10"></label>
+        <label>H:<input id="heightInput" type="number" min="5" max="30" value="10"></label>
+        <label>M:<input id="minesInput" type="number" min="1" max="200" value="15"></label>
+      </span>
+
+      <button id="newGame">Nuevo</button>
+    </div>
+    <div class="status">
+      <div class="counter">
+        💣 <span id="minesLeft">000</span>
+      </div>
+      <div class="face" id="faceBtn" title="Reiniciar">🙂</div>
+      <div class="timer">
+        ⏱️ <span id="time">000</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div id="board" class="board" role="grid" aria-label="Tablero de Buscaminas"></div>
+  </main>
+
+  <footer class="hint">
+    Click: descubrir — Clic derecho: 🚩 
+  </footer>
+
+</body>
+</html>
